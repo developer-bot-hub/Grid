@@ -1,0 +1,37 @@
+*{
+	font-family: 'Raleway', cursive;
+	font-weight: 100px;
+    color: #ff0571;
+}
+body {
+    background: radial-gradient(circle,#ff0571,#f985b7);
+}
+.grid-container {
+    background-color: #f985b7;
+    display: grid;
+    grid-template-rows:
+                [first-line]
+                150px
+                [second-line]
+                150px
+                [third-line]
+                150px
+                [fourth-line];
+    grid-template-columns:
+                [right-line]
+                150px
+                150px
+                150px
+                [left-line];
+    border: 5px solid #fff;
+}
+.grid-item {
+    padding: 20px;
+    background: lightgreen;
+    border: 1px solid #fff;
+}
+.grid-item:first-child {
+    background: lightsalmon;
+    grid-row: first-line / third-line;
+    grid-column: right-line / end-line;
+}
