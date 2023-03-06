@@ -1,0 +1,36 @@
+*{
+	font-family: 'Raleway', cursive;
+	font-weight: 100px;
+    color: #c501e2;
+}
+body {
+    background: radial-gradient(circle,#2ef8a0,#e7c500);
+    padding: 15px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-columns: 1fr;
+    border: 5px solid #e7c500;
+    background-color: #c501e2;
+    grid-auto-flow: dense;
+    justify-items: center;
+    align-items: center;
+    height: 600px;
+}
+.grid-item {
+    border: 5px solid #e7c500;
+    background-color: #2ef8a0;
+    font-size: 20px;
+    padding: 20px;
+}
+.grid-item:first-child {
+    align-self: start;
+    justify-self: start;
+}
+.grid-item:first-child:hover {
+    align-self: end;
+    justify-self: end;
+}
