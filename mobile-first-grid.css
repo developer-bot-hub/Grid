@@ -1,0 +1,55 @@
+*{
+	font-family: 'Raleway', cursive;
+	font-weight: 100px;
+    color: #000/*#2527FF*/;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.header, .main, .aside, .footer {
+    padding: 20px;
+}
+.header {
+    background: #9988DD;
+    flex-basis: 60px;
+}
+.main {
+    background: #1099BB;
+    flex-basis: 300px;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+.aside {
+    background: #15ab92;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.footer {
+    background: #f3aacb;
+    flex-grow: 1;
+}
+
+@media screen and (min-width: 700px) {
+    .content {
+        display: grid;
+        grid-template-rows: 80px 1fr 1fr 1fr 1fr 80px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .main {
+        grid-row: 2 / 6;
+        grid-column: 1 / span 2;
+    }
+    .aside {
+        grid-row: 2 / 6;
+    }
+    .header {
+        grid-column: 1 / span 3;
+    }
+    .footer {
+        grid-row: 6 / 7;
+        grid-column: 1 / span 3;
+    }
+}
